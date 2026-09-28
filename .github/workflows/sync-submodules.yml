@@ -1,0 +1,72 @@
+name: Sync Submodules
+
+# 定时同步所有 submodule 到上游最新版本，并推送更新到本仓库。
+# 也可手动触发，可选跳过 fancontrol（其锁定在特定 commit）。
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # 每周一 UTC 06:00 = 北京时间 14:00
+  workflow_dispatch:
+    inputs:
+      skip_fancontrol:
+        description: '跳过 fancontrol（锁定 commit 7655e6d）'
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 配置 Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: 同步所有 submodule
+        run: |
+          # 逐个更新 submodule 到各自分支的最新 HEAD
+          git submodule update --remote --merge
+
+          # fancontrol 锁定在 commit 7655e6d（上游 HEAD 有破坏性变更）
+          if [ "${{ inputs.skip_fancontrol }}" != "false" ]; then
+            echo "锁定 fancontrol 到 7655e6d..."
+            cd luci-app-fancontrol
+            git fetch --depth 1 origin 7655e6d624e7d277cf5cb617584a638b08b672d7
+            git checkout 7655e6d624e7d277cf5cb617584a638b08b672d7
+            cd ..
+          fi
+
+          # 同步 ap-modem 子目录（从 OpenWrt-Add 仓库提取）
+          echo "同步 luci-app-ap-modem..."
+          rm -rf luci-app-ap-modem
+          mkdir -p luci-app-ap-modem
+          cp -a OpenWrt-Add/luci-app-ap-modem/* luci-app-ap-modem/
+          cp -a OpenWrt-Add/luci-app-ap-modem/.* luci-app-ap-modem/ 2>/dev/null || true
+
+      - name: 检查是否有更新
+        id: check
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "无更新"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git diff --stat
+          fi
+
+      - name: 提交并推送
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git add -A
+          git commit -m "chore: sync submodules ($(date -u +%Y-%m-%d))"
+          git push

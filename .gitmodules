@@ -1,0 +1,199 @@
+[submodule "luci-app-honk"]
+	path = luci-app-honk
+	url = https://github.com/498777/luci-app-honk.git
+	branch = main
+[submodule "luci-app-dae"]
+	path = luci-app-dae
+	url = https://github.com/498777/luci-app-dae.git
+	branch = main
+[submodule "luci-app-oxidns"]
+	path = luci-app-oxidns
+	url = https://github.com/hahaher123/luci-app-oxidns.git
+	branch = main
+[submodule "luci-app-adguardhome"]
+	path = luci-app-adguardhome
+	url = https://github.com/terrytyc/luci-app-adguardhome.git
+	branch = main
+[submodule "luci-app-netmonitor"]
+	path = luci-app-netmonitor
+	url = https://github.com/LianXia233/luci-app-netmonitor.git
+	branch = main
+[submodule "luci-app-cpu-status"]
+	path = luci-app-cpu-status
+	url = https://github.com/gSpotx2f/luci-app-cpu-status.git
+	branch = master
+[submodule "luci-app-internet-detector"]
+	path = luci-app-internet-detector
+	url = https://github.com/gSpotx2f/luci-app-internet-detector.git
+	branch = master
+[submodule "luci-app-log"]
+	path = luci-app-log
+	url = https://github.com/gSpotx2f/luci-app-log.git
+	branch = master
+[submodule "luci-app-temp-status"]
+	path = luci-app-temp-status
+	url = https://github.com/gSpotx2f/luci-app-temp-status.git
+	branch = master
+[submodule "luci-app-watchdog"]
+	path = luci-app-watchdog
+	url = https://github.com/sirpdboy/luci-app-watchdog.git
+	branch = main
+[submodule "luci-app-trafficctl"]
+	path = luci-app-trafficctl
+	url = https://github.com/YusDyr/luci-app-trafficctl.git
+	branch = main
+[submodule "qosmate"]
+	path = qosmate
+	url = https://github.com/hudra0/qosmate.git
+	branch = main
+[submodule "luci-app-qosmate"]
+	path = luci-app-qosmate
+	url = https://github.com/hudra0/luci-app-qosmate.git
+	branch = main
+[submodule "luci-app-bandix"]
+	path = luci-app-bandix
+	url = https://github.com/timsaya/luci-app-bandix.git
+	branch = main
+[submodule "openwrt-bandix"]
+	path = openwrt-bandix
+	url = https://github.com/timsaya/openwrt-bandix.git
+	branch = main
+[submodule "OpenAppFilter"]
+	path = OpenAppFilter
+	url = https://github.com/destan19/OpenAppFilter.git
+	branch = master
+[submodule "luci-app-mosdns"]
+	path = luci-app-mosdns
+	url = https://github.com/sbwml/luci-app-mosdns.git
+	branch = v5
+[submodule "luci-app-zerotier"]
+	path = luci-app-zerotier
+	url = https://github.com/rabbitrogi/luci-app-zerotier.git
+	branch = main
+[submodule "luci-app-easytier"]
+	path = luci-app-easytier
+	url = https://github.com/EasyTier/luci-app-easytier.git
+	branch = main
+[submodule "OpenWrt-nikki"]
+	path = OpenWrt-nikki
+	url = https://github.com/nikkinikki-org/OpenWrt-nikki.git
+	branch = main
+[submodule "OpenWrt-momo"]
+	path = OpenWrt-momo
+	url = https://github.com/nikkinikki-org/OpenWrt-momo.git
+	branch = main
+[submodule "luci-app-kixdns"]
+	path = luci-app-kixdns
+	url = https://github.com/JohnsonRan/luci-app-kixdns.git
+	branch = main
+[submodule "luci-app-substore"]
+	path = luci-app-substore
+	url = https://github.com/Arthur97172/luci-app-substore.git
+	branch = main
+[submodule "luci-app-homeproxy-pro"]
+	path = luci-app-homeproxy-pro
+	url = https://github.com/szwjp/luci-app-homeproxy-pro.git
+	branch = main
+[submodule "luci-app-cloudflare-ip"]
+	path = luci-app-cloudflare-ip
+	url = https://github.com/hello-yunshu/luci-app-cloudflare-ip.git
+	branch = main
+[submodule "openwrt-fchomo"]
+	path = openwrt-fchomo
+	url = https://github.com/fcshark-org/openwrt-fchomo.git
+[submodule "luci-app-cloudflarespeedtest"]
+	path = luci-app-cloudflarespeedtest
+	url = https://github.com/stevenjoezhang/luci-app-cloudflarespeedtest.git
+[submodule "luci-app-openlist2"]
+	path = luci-app-openlist2
+	url = https://github.com/sbwml/luci-app-openlist2.git
+	branch = main
+[submodule "luci-app-owq-wol"]
+	path = luci-app-owq-wol
+	url = https://github.com/isalikai/luci-app-owq-wol.git
+	branch = main
+[submodule "luci-app-hw-dashboard"]
+	path = luci-app-hw-dashboard
+	url = https://github.com/AliLostInTheDark/luci-app-hw-dashboard.git
+	branch = main
+[submodule "luci-app-timecontrol"]
+	path = luci-app-timecontrol
+	url = https://github.com/gaobin89/luci-app-timecontrol.git
+	branch = js
+[submodule "luci-app-partexp"]
+	path = luci-app-partexp
+	url = https://github.com/sirpdboy/luci-app-partexp.git
+	branch = main
+[submodule "luci-app-taskplan"]
+	path = luci-app-taskplan
+	url = https://github.com/sirpdboy/luci-app-taskplan.git
+	branch = main
+[submodule "luci-app-harbor-file-pro"]
+	path = luci-app-harbor-file-pro
+	url = https://github.com/whzhni1/luci-app-harbor-file-pro.git
+	branch = main
+[submodule "luci-app-airconnect"]
+	path = luci-app-airconnect
+	url = https://github.com/sbwml/luci-app-airconnect.git
+	branch = main
+[submodule "node"]
+	path = node
+	url = https://github.com/sbwml/feeds_packages_lang_node.git
+	branch = packages-25.12
+[submodule "luci-app-change-mac"]
+	path = luci-app-change-mac
+	url = https://github.com/muink/luci-app-change-mac.git
+[submodule "luci-app-mini-diskmanager"]
+	path = luci-app-mini-diskmanager
+	url = https://github.com/4IceG/luci-app-mini-diskmanager.git
+[submodule "openwrt-alwaysonline"]
+	path = openwrt-alwaysonline
+	url = https://github.com/muink/openwrt-alwaysonline.git
+[submodule "openwrt-rgmac"]
+	path = openwrt-rgmac
+	url = https://github.com/muink/openwrt-rgmac.git
+[submodule "luci-app-alwaysonline"]
+	path = luci-app-alwaysonline
+	url = https://github.com/muink/luci-app-alwaysonline.git
+[submodule "luci-app-natmapt"]
+	path = luci-app-natmapt
+	url = https://github.com/muink/luci-app-natmapt.git
+[submodule "OpenWrt-Add"]
+	path = OpenWrt-Add
+	url = https://github.com/QiuSimons/OpenWrt-Add.git
+[submodule "openwrt-stuntman"]
+	path = openwrt-stuntman
+	url = https://github.com/muink/openwrt-stuntman.git
+[submodule "luci-app-fancontrol"]
+	path = luci-app-fancontrol
+	url = https://github.com/bigmalloy/luci-app-fancontrol.git
+[submodule "openwrt-natmapt"]
+	path = openwrt-natmapt
+	url = https://github.com/muink/openwrt-natmapt.git
+[submodule "luci-theme-graphite"]
+	path = luci-theme-graphite
+	url = https://github.com/Zakkaus/luci-theme-graphite.git
+[submodule "luci-app-graphite"]
+	path = luci-app-graphite
+	url = https://github.com/Zakkaus/luci-app-graphite.git
+[submodule "luci-theme-aurora"]
+	path = luci-theme-aurora
+	url = https://github.com/eamonxg/luci-theme-aurora.git
+[submodule "luci-app-aurora-config"]
+	path = luci-app-aurora-config
+	url = https://github.com/eamonxg/luci-app-aurora-config.git
+[submodule "luci-theme-liquid"]
+	path = luci-theme-liquid
+	url = https://github.com/zzsj0928/luci-theme-liquid.git
+[submodule "luci-theme-shadcn"]
+	path = luci-theme-shadcn
+	url = https://github.com/eamonxg/luci-theme-shadcn.git
+[submodule "luci-theme-footstrap"]
+	path = luci-theme-footstrap
+	url = https://github.com/VizzleTF/luci-theme-footstrap.git
+[submodule "luci-theme-fluent"]
+	path = luci-theme-fluent
+	url = https://github.com/LazuliKao/luci-theme-fluent.git
+[submodule "Obsidian-Theme"]
+	path = Obsidian-Theme
+	url = https://github.com/OnyxAxisOwO/Obsidian-Theme.git
