@@ -158,9 +158,6 @@
 [submodule "luci-app-natmapt"]
 	path = luci-app-natmapt
 	url = https://github.com/muink/luci-app-natmapt.git
-[submodule "OpenWrt-Add"]
-	path = OpenWrt-Add
-	url = https://github.com/QiuSimons/OpenWrt-Add.git
 [submodule "openwrt-stuntman"]
 	path = openwrt-stuntman
 	url = https://github.com/muink/openwrt-stuntman.git
@@ -197,3 +194,15 @@
 [submodule "Obsidian-Theme"]
 	path = Obsidian-Theme
 	url = https://github.com/OnyxAxisOwO/Obsidian-Theme.git
+[submodule "openwrt-passwall-packages"]
+	path = openwrt-passwall-packages
+	url = https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git
+	branch = main
+[submodule "openwrt-passwall"]
+	path = openwrt-passwall
+	url = https://github.com/Openwrt-Passwall/openwrt-passwall.git
+	branch = main
+[submodule "helloworld"]
+	path = helloworld
+	url = https://github.com/fw876/helloworld.git
+	branch = dev

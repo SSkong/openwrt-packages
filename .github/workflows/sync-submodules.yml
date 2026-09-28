@@ -1,11 +1,12 @@
 name: Sync Submodules
 
-# 定时同步所有 submodule 到上游最新版本，并推送更新到本仓库。
+# 每天自动同步所有 submodule 到上游最新版本，并推送更新到本仓库。
 # 也可手动触发，可选跳过 fancontrol（其锁定在特定 commit）。
+# luci-app-ap-modem 与 luci-app-model-gateway 为静态目录，不参与同步。
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # 每周一 UTC 06:00 = 北京时间 14:00
+    - cron: '0 6 * * *'  # 每天 UTC 06:00 = 北京时间 14:00
   workflow_dispatch:
     inputs:
       skip_fancontrol:
@@ -46,12 +47,8 @@ jobs:
             cd ..
           fi
 
-          # 同步 ap-modem 子目录（从 OpenWrt-Add 仓库提取）
-          echo "同步 luci-app-ap-modem..."
-          rm -rf luci-app-ap-modem
-          mkdir -p luci-app-ap-modem
-          cp -a OpenWrt-Add/luci-app-ap-modem/* luci-app-ap-modem/
-          cp -a OpenWrt-Add/luci-app-ap-modem/.* luci-app-ap-modem/ 2>/dev/null || true
+          # luci-app-ap-modem：静态目录，不参与同步（锁定当前版本）
+          # luci-app-model-gateway：本地 Makefile + .lmo，不参与同步
 
       - name: 检查是否有更新
         id: check
