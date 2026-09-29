@@ -36,7 +36,10 @@ jobs:
       - name: 同步所有 submodule
         run: |
           # 逐个更新 submodule 到各自分支的最新 HEAD
-          git submodule update --remote --merge
+          # 用 --force 而非 --merge：镜像同步应始终跟踪上游 HEAD，
+          # 上游 force-push 后 --merge 会报 "refusing to merge unrelated histories"
+          # （submodule 本地无自有提交，force checkout 安全）
+          git submodule update --remote --force
 
           # fancontrol 锁定在 commit 7655e6d（上游 HEAD 有破坏性变更）
           if [ "${{ inputs.skip_fancontrol }}" != "false" ]; then
