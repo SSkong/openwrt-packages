@@ -90,10 +90,6 @@
 	path = luci-app-substore
 	url = https://github.com/Arthur97172/luci-app-substore.git
 	branch = main
-[submodule "luci-app-homeproxy-pro"]
-	path = luci-app-homeproxy-pro
-	url = https://github.com/szwjp/luci-app-homeproxy-pro.git
-	branch = main
 [submodule "luci-app-cloudflare-ip"]
 	path = luci-app-cloudflare-ip
 	url = https://github.com/hello-yunshu/luci-app-cloudflare-ip.git
@@ -206,3 +202,11 @@
 	path = helloworld
 	url = https://github.com/fw876/helloworld.git
 	branch = dev
+[submodule "luci-app-homeproxy"]
+	path = luci-app-homeproxy
+	url = https://github.com/XiaoHaiSly/luci-app-homeproxy.git
+	branch = main
+[submodule "tachyon"]
+	path = tachyon
+	url = https://github.com/Dushnilin/tachyon.git
+	branch = main
